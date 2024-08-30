@@ -1,0 +1,213 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: rgb(83, 69, 69);
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 555px;
+    height: 505px;
+    padding: 12px;;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius:18px ;
+    overflow: hidden;
+    display: initial;
+    background-color: black;
+}
+.anime{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 680px;
+    transform-origin: top left;
+    background: linear-gradient(0deg, transparent, orange, rgb(255, 0, 0) );
+    animation: animate 5s infinite linear;
+    
+    
+}
+
+.container{
+    width: 550px;
+    height: 500px;
+    padding: 12px;
+    display: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 18px;
+    background-color: rgb(81, 152, 152);
+    overflow: hidden;
+
+}
+
+
+
+.heading{
+   position: absolute;
+   font-size: 20px;
+   font-weight: bolder;
+    width: 70%;
+    left: 15%;
+    top:0;
+    background: linear-gradient(90deg, transparent , rgb(255, 204, 0) , rgb(238, 51, 5));
+    -webkit-text-fill-color: transparent;
+    background-clip: initial;
+    -webkit-background-clip: text;
+}
+
+.note{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50% , -50%);
+}
+
+.input{
+    position: inherit;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50% , -50%);
+    width: 225px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    box-shadow: 1px 3px 2px 2px  black;
+   
+}
+
+
+input::-webkit-outer-spin-button,::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.guess{
+    position: inherit;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 13px;
+    font-size: 20px;
+    font-weight: bolder;
+    box-shadow: 2px 2px 5px rgb(31, 22, 22);
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    &:hover{
+        box-shadow:4px 4px 8px black ;
+        text-shadow:  4px 3px 10px  rgb(10, 9, 9);
+    }
+}
+
+.result{
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    height: 200px;
+    transform: translate(-50% , -50%);
+    width: 90%;
+    text-shadow: 4px 3px 3px  rgb(252, 244, 244);
+}
+
+.result .usernum{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50% , -50%);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.result .numofguess{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50% , -50%);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.result .hint{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50% , -50%);
+    font-weight: bold;
+    font-size:x-large;
+    font-style: oblique;
+}
+
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    color: whitesmoke;
+    font-size: 18px;
+    width: 350px;
+    height: 350px;
+    background-color: rgba(16, 13, 13, 0.781);
+    border-radius: 12px;
+    z-index: 5;
+}
+
+.popupbtn{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 30px;
+    color: rgb(178, 178, 204);
+    background: rgba(50, 4, 15, 0.7);
+
+    &:hover{
+        text-shadow: 3px 6px 2px white;
+    }
+}
+
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
